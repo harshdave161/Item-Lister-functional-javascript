@@ -95,8 +95,8 @@ var span = document.getElementById("span");
        button.className = 'button';
        button.appendChild(document.createTextNode('X'));
        li.appendChild(button);
-       button.style.padding= '4px';
-       button.style.background= "rgb(231, 231, 41)";
+       button.style.padding='4px 6px 4px 6px';
+       button.style.background= "rgb(73, 72, 72)";
        button.style.border= 'none';
        button.style.cursor= 'pointer';
        button.style.position= 'absolute';
@@ -109,7 +109,7 @@ var span = document.getElementById("span");
     itemlist.addEventListener('click', removeitem);
     function removeitem(e){
     if(e.target.classList.contains('button')){
-        if(confirm('Are You Sure?')){
+        if(confirm('Are You Sure You Wanna Delete Item ?')){
         let li = e.target.parentElement;
         itemlist.removeChild(li);
         }

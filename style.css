@@ -3,16 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    
+}
 ul>li{
     list-style: none;
 }
 #header{
     min-height: 9vh;
-    background: rgb(49, 146, 49);
+    background: rgba(235, 77, 77, 0.938);
     color: white;
 }
 #header>#kam{
     padding:20px;
+    font-size: 22px;
     font-family:  sans-serif;
     display: flex;
     justify-content: space-between;
@@ -21,23 +25,39 @@ ul>li{
 #kam > #filter{
     padding: 8px;
     border: none;
-    background: rgb(54, 54, 54);
+    background: rgb(59, 58, 58);
     color: #f4f4f4;
     outline: none;
     border-radius: 15px;
     text-align: center;
+    width:60px;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+#kam > #filter:hover{
+    width:130px;
 }
 #container{
-    margin: 30px;
+    margin: 20px;
    border: 1px solid rgba(0, 0, 0, 0.295);
-   padding: 50px;  
+   padding: 20px;  
    background: #f4f4f4;
+   border-radius: 5px; 
+   display: flex;
+   flex-direction: column;
 }
 #container >h1 ,h3{
     font-size: 30px;
+    
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: auto;
 }
 #form > #item-input{
     padding: 7px;
@@ -53,33 +73,28 @@ ul>li{
     border-radius: 4px; 
     outline: none;
     cursor: pointer;
-    display: inline-block;
-    width: 100%;
+    width: 50%;
     margin: 5px;
+    transform: translate(50%,0);
+    justify-content: center;
 }
 #container > ul >li{
-    border: 1px solid rgba(0, 0, 0, 0.295);
+       
+       border: 1px solid rgba(0, 0, 0, 0.295) ;
     padding: 10px;
+    padding-left: 15px;
+    border-radius: 20px;
+    margin-bottom:6px; 
 }
 
-#button{
-    display: block;
-    padding: 10px;
-    text-align: center;
-    background: rgb(54, 54, 54);
-    color: #f4f4f4;
-    border: none;
-    outline: none;
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer; 
-}
 #items{
     position: relative;
 }
 .button{
-    padding: 4px;
-    background: rgb(231, 231, 41);
+    padding: 4px 6px 4px 6px;
+    background: rgb(73, 72, 72);
+    font-weight: 500;
+    color: #f4f4f4;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -87,4 +102,25 @@ ul>li{
     right: 10px;
     outline: none;
     margin-top:-2px;
+    
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer > h3{
+    bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+}
+@media (min-width:1000px){
+   #Kam > h1 {
+       font-size: 38px;
+   }
+   #container{
+       margin:  30px 150px;
+       min-height: 50%;
+   }
 }
